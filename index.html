@@ -21,9 +21,51 @@
     </header>
     <main>
         <div>
-            <p>Hey there! it's Solideo Dajoh's homepage.</p>
+            <p id="greet">Hey there! <br>It's Solideo Dajoh's homepage.</p>
+        </div>
+        <div>
+            <p>Tebak angka antara 1 sampai 10:</p>
+
+            <input type="number" id="guess" min="1" max="10">
+            <button onclick="checkGuess()">Tebak</button>
+            <p id="message"></p>
         </div>
     </main>
+
+    <script>
+        const randomNumber = Math.floor(Math.random() * 10) + 1;
+        let attempts = 0;
+        
+        function checkGuess() {
+          const guess = parseInt(document.getElementById('guess').value);
+          const message = document.getElementById('message');
+        
+          if (isNaN(guess) || guess < 1 || guess > 10) {
+            message.textContent = 'Masukkan angka antara 1 sampai 10!';
+            return;
+          }
+        
+          attempts++;
+        
+          if (guess === randomNumber) {
+            message.textContent = `Selamat! Anda menebak dengan benar dalam ${attempts} percobaan.`;
+            resetGame();
+          } else if (guess < randomNumber) {
+            message.textContent = 'Tebakan Anda terlalu rendah, coba lagi.';
+          } else {
+            message.textContent = 'Tebakan Anda terlalu tinggi, coba lagi.';
+          }
+        }
+
+        function resetGame() {
+             // Reset nilai acak dan percobaan
+            randomNumber = Math.floor(Math.random() * 10) + 1;
+            attempts = 0;
+             // Reset input dan pesan
+            document.getElementById('guess').value = '';
+            document.getElementById('message').textContent = '';
+        }
+    </script>
 
 </body>
 </html>
