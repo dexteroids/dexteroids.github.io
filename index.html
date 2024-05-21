@@ -2,70 +2,76 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
-    <link rel="stylesheet" type="text/css" href="styles.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="mediaqueries.css">
 </head>
+
 <body>
     <header>
-        <nav>
-            <div class="navbar">
-                <h1 class="heading">Home</h1>
+        <nav id="navbar-desktop">
+            <div class="logo">Deo</div>
+            <div>
                 <ul class="menu">
+                    <li><a href="index.html">Home</a></li>
                     <li><a href="gallery.html">Gallery</a></li>
                     <li><a href="blog.html">Blog</a></li> 
                     <li><a href="contact.html">Contact</a></li>
                 </ul>
             </div>
         </nav>
+        <nav id="navbar-hamburger">
+            <div class="logo">Deo</div>
+            <div class="ham-menu">
+                <div class="ham-icon" onclick="toggleMenu()">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <div class="ham-menu-links">
+                    <li><a href="index.html" onclick="toggleMenu()">Home</a></li>
+                    <li><a href="gallery.html" onclick="toggleMenu()">Gallery</a></li>
+                    <li><a href="blog.html" onclick="toggleMenu()">Blog</a></li> 
+                    <li><a href="contact.html" onclick="toggleMenu()">Contact</a></li>
+                </div>
+            </div>
+        </nav>
     </header>
+   
     <main>
-        <div>
-            <p id="greet">Hey there! <br>It's Solideo Dajoh's homepage.</p>
-        </div>
+        <section id="profile">
+            <div class="section__pic-container">
+                <img src="images/manthap.svg" alt="Solideo Dajoh">
+            </div>
+            <div class="section__text">
+                <p class="section__text__p1">Hello, I am</p>
+                <h1 class="title">Solideo Dajoh</h1>
+                <div class="btn-container">
+                    <!-- ADD A DESTINATION OR SOMETHING -->
+                    <button class="btn btn-color-1" onclick="">ANYTHING</button>
+                </div>
+            </div>
+        </section>
+
+
+        <!--
         <div>
             <p>Tebak angka antara 1 sampai 10:</p>
 
             <input type="number" id="guess" min="1" max="10">
             <button onclick="checkGuess()">Tebak</button>
             <p id="message"></p>
-        </div>
+        </div> 
+        -->
     </main>
 
-    <script>
-        const randomNumber = Math.floor(Math.random() * 10) + 1;
-        let attempts = 0;
-        
-        function checkGuess() {
-          const guess = parseInt(document.getElementById('guess').value);
-          const message = document.getElementById('message');
-        
-          if (isNaN(guess) || guess < 1 || guess > 10) {
-            message.textContent = 'Masukkan angka antara 1 sampai 10!';
-            return;
-          }
-        
-          attempts++;
-        
-          if (guess === randomNumber) {
-            message.textContent = `Selamat! Anda menebak dengan benar dalam ${attempts} percobaan.`;
-            resetGame();
-          } else if (guess < randomNumber) {
-            message.textContent = 'Tebakan Anda terlalu rendah, coba lagi.';
-          } else {
-            message.textContent = 'Tebakan Anda terlalu tinggi, coba lagi.';
-          }
-        }
 
-        function resetGame() {
-             // Reset nilai acak dan percobaan
-            randomNumber = Math.floor(Math.random() * 10) + 1;
-            attempts = 0;
-             // Reset input dan pesan
-            document.getElementById('guess').value = '';
-            document.getElementById('message').textContent = '';
-        }
-    </script>
+
+
+
+    <script src="script.js"></script>
 
 </body>
 </html>

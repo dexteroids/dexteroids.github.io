@@ -1,0 +1,27 @@
+@media screen and (max-width: 1400px) {
+    #profile{
+        height: 83vh;
+        margin-bottom: 6rem;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    #navbar-desktop{
+        display: none;
+    }
+    #navbar-hamburger{
+        display: flex;
+    }
+    #profile{
+        display: block;
+    }
+    section{
+        height: fit-content;
+        margin: 0 5%;
+    }
+    .section__pic-container{
+        width: 400px;
+        height: 400px;
+        margin: 0 auto 2rem;
+    }
+}

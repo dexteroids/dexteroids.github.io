@@ -4,18 +4,36 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Blog</title>
-    <link rel="stylesheet" type="text/css" href="styles.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="mediaqueries.css">
 </head>
 <body>
     <header>
-        <nav>
-            <div class="navbar">
-                <h1 class="heading">Blog</h1>
+        <nav id="navbar-desktop">
+            <div class="logo">Deo</div>
+            <div>
                 <ul class="menu">
                     <li><a href="index.html">Home</a></li>
-                    <li><a href="gallery.html">Gallery</a></li> 
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="blog.html">Blog</a></li> 
                     <li><a href="contact.html">Contact</a></li>
                 </ul>
+            </div>
+        </nav>
+        <nav id="navbar-hamburger">
+            <div class="logo">JJ</div>
+            <div class="ham-menu">
+                <div class="ham-icon" onclick="toggleMenu()">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <div class="ham-menu-links">
+                    <li><a href="index.html" onclick="toggleMenu()">Home</a></li>
+                    <li><a href="gallery.html" onclick="toggleMenu()">Gallery</a></li>
+                    <li><a href="blog.html" onclick="toggleMenu()">Blog</a></li> 
+                    <li><a href="contact.html" onclick="toggleMenu()">Contact</a></li>
+                </div>
             </div>
         </nav>
     </header>
@@ -29,5 +47,8 @@
 
     <h2>Sport</h2>
     <p><a href="https://sports.okezone.com/read/2024/03/24/37/2987511/hasil-race-f1-gp-australia-2024-ferrari-berjaya-carlos-sainz-jr-dan-charles-leclerc-kuasai-posisi-pertama-dan-kedua" title="Formula 1">Formula 1</a></p>
+
+
+    <script src="script.js"></script>
 </body>
 </html>

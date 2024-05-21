@@ -4,21 +4,40 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact</title>
-    <link rel="stylesheet" type="text/css" href="styles.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="mediaqueries.css">
 </head>
 <body>
     <header>
-        <nav>
-            <div class="navbar">
-                <h1 class="heading">Contact</h1>
+        <nav id="navbar-desktop">
+            <div class="logo">Deo</div>
+            <div>
                 <ul class="menu">
                     <li><a href="index.html">Home</a></li>
-                    <li><a href="blog.html">Blog</a></li> 
                     <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="blog.html">Blog</a></li> 
+                    <li><a href="contact.html">Contact</a></li>
                 </ul>
             </div>
         </nav>
+        <nav id="navbar-hamburger">
+            <div class="logo">Deo</div>
+            <div class="ham-menu">
+                <div class="ham-icon" onclick="toggleMenu()">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <div class="ham-menu-links">
+                    <li><a href="index.html" onclick="toggleMenu()">Home</a></li>
+                    <li><a href="gallery.html" onclick="toggleMenu()">Gallery</a></li>
+                    <li><a href="blog.html" onclick="toggleMenu()">Blog</a></li> 
+                    <li><a href="contact.html" onclick="toggleMenu()">Contact</a></li>
+                </div>
+            </div>
+        </nav>
     </header>
+
     <p>Email: <a href="mailto:dajohsolideo2645@gmail.com">dajohsolideo2645@gmail.com</a></p>
     <p>Phone: +62-821-1122-9831</p>
     <p>
@@ -26,5 +45,7 @@
         <a href="https://www.instagram.com/solideobnd__">Instagram</a>
         <a href="https://www.linkedin.com/in/solideodajoh">LinkedIn</a>
     </p>
+
+    <script src="script.js"></script>
 </body>
 </html>
