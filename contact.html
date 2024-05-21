@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,7 +8,8 @@
     <link rel="stylesheet" type="text/css" href="style.css">
     <link rel="stylesheet" type="text/css" href="mediaqueries.css">
 </head>
-<body>
+<body class="contact-body">
+
     <header>
         <nav id="navbar-desktop">
             <div class="logo">Deo</div>
@@ -38,13 +40,39 @@
         </nav>
     </header>
 
-    <p>Email: <a href="mailto:dajohsolideo2645@gmail.com">dajohsolideo2645@gmail.com</a></p>
-    <p>Phone: +62-821-1122-9831</p>
-    <p>
-        <a href="https://www.facebook.com/solideo.dajoh.7">Facebook</a>
-        <a href="https://www.instagram.com/solideobnd__">Instagram</a>
-        <a href="https://www.linkedin.com/in/solideodajoh">LinkedIn</a>
-    </p>
+    <div class="forms-and-info">
+        <div class="form-container">
+            <h1 class="form-title">Contact Me</h1>
+            <form action="./backend/contact_process.php" method="POST">
+                <div class="form-group">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" required></textarea>
+                </div>
+                <div class="form-group">
+                    <input type="submit" value="Submit">
+                </div>
+            </form>
+        </div>
+
+        <div class="info">
+            <p>Email: <a href="mailto:dajohsolideo2645@gmail.com">dajohsolideo2645@gmail.com</a></p>
+            <p>Phone: +62-821-1122-9831</p>
+            <p>
+                <a href="https://www.facebook.com/solideo.dajoh.7">Facebook</a>
+                <a href="https://www.instagram.com/solideobnd__">Instagram</a>
+                <a href="https://www.linkedin.com/in/solideodajoh">LinkedIn</a>
+            </p>
+        </div>
+
+    </div>
 
     <script src="script.js"></script>
 </body>
